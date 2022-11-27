@@ -1,0 +1,18 @@
+.content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .pagination-container .pagination-item.selected {
+    background-color: blue;
+    color: white;
+  }
+  .pagination-container .pagination-item {
+    font-size: 24px;
+  }
+  .pagination-container .pagination-item:hover {
+    background-color: rgba(0, 0, 255, 0.5);
+    cursor: pointer;
+  }
