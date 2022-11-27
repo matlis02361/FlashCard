@@ -1,11 +1,11 @@
 {
-  "name": "et-001-nestcomps",
+  "name": "flash-card",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "import": "node -r esm backend/import.mjs",
     "addTranslation": "node -r esm backend/addTranslation.mjs",
