@@ -4,11 +4,10 @@ import data from './data/translations.json';
 import Card from 'react-bootstrap/Card';
 import './App.scss';
 
-let PageSize = 20;
+let PageSize = 30;
 
 export default function App() {
 	const [currentPage, setCurrentPage] = useState(1);
-
 	const currentTableData = useMemo(() => {
 		const firstPageIndex = (currentPage - 1) * PageSize;
 		const lastPageIndex = firstPageIndex + PageSize;
@@ -20,14 +19,14 @@ export default function App() {
 			<h1>Excel Read/Write Example</h1>
 			<p>Welcome to this site.</p>
 			<h2>
-				There are
-				{currentTableData.length * currentPage + 1 - currentTableData.length}
-				bis {currentTableData.length * currentPage} von {data.length}
-				translations:
+				There are {(currentPage - 1) * PageSize + 1} to{' '}
+				{currentPage > data.length / PageSize
+					? (currentPage - 1) * PageSize + (data.length % PageSize)
+					: (currentPage - 1) * PageSize + PageSize}{' '}
+				from {data.length} translations:
 			</h2>
 
 			<div className="container-fluid">
-				
 				<div className="content">
 					{currentTableData.map((item, i) => {
 						return (
