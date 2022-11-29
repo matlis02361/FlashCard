@@ -1,3 +1,7 @@
+body {
+  background-color: pink;
+}
+
 .content {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -6,13 +10,17 @@
     gap: 20px;
   }
   .pagination-container .pagination-item.selected {
-    background-color: blue;
+    background-color: rgb(221, 39, 39);
     color: white;
   }
   .pagination-container .pagination-item {
     font-size: 24px;
   }
   .pagination-container .pagination-item:hover {
-    background-color: rgba(0, 0, 255, 0.5);
+    background-color: rgb(249, 87, 87);
     cursor: pointer;
   }
+input{
+  width: 101px;
+ 
+}

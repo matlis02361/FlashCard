@@ -1,19 +1,23 @@
 import React, { useState, useMemo } from 'react';
 import Pagination from './pagination';
 import data from './data/translations.json';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import './App.scss';
 
-let PageSize = 30;
+let PageSize = 20;
 
 export default function App() {
 	const [currentPage, setCurrentPage] = useState(1);
+	const [dataXlsx, setData] = useState('');
+	const [test, setTest] = useState(null);
 	const currentTableData = useMemo(() => {
 		const firstPageIndex = (currentPage - 1) * PageSize;
 		const lastPageIndex = firstPageIndex + PageSize;
 		return data.slice(firstPageIndex, lastPageIndex);
 	}, [currentPage]);
-
+	console.log(dataXlsx);
+	console.log(test);
 	return (
 		<>
 			<h1>Excel Read/Write Example</h1>
@@ -25,7 +29,18 @@ export default function App() {
 					: (currentPage - 1) * PageSize + PageSize}{' '}
 				from {data.length} translations:
 			</h2>
-
+			<div>
+				<label htmlFor=""></label>
+				<input 
+					title=''
+					type="file"
+					id="avatar"
+					name="avatar"
+					accept=".xlsx"
+					value={test}
+					onChange={setData}
+				/>
+			</div>
 			<div className="container-fluid">
 				<div className="content">
 					{currentTableData.map((item, i) => {
