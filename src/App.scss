@@ -1,26 +1,53 @@
 body {
-  background-color: pink;
+	background-color: pink;
 }
 
 .content {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  .pagination-container .pagination-item.selected {
-    background-color: rgb(221, 39, 39);
-    color: white;
-  }
-  .pagination-container .pagination-item {
-    font-size: 24px;
-  }
-  .pagination-container .pagination-item:hover {
-    background-color: rgb(249, 87, 87);
-    cursor: pointer;
-  }
-input{
-  width: 101px;
- 
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
 }
+.pagination-container .pagination-item.selected {
+	background-color: rgb(221, 39, 39);
+	color: white;
+}
+.pagination-container .pagination-item {
+	font-size: 24px;
+}
+.pagination-container .pagination-item:hover {
+	background-color: rgb(249, 87, 87);
+	cursor: pointer;
+}
+input {
+	width: 101px;
+}
+
+// X-Small devices (portrait phones, less than 576px)
+/* @media (max-width: 772.98px) {
+	.content {
+		grid-template-columns: auto;
+	}
+} */
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { .content{grid-template-columns: auto;} }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { .content{grid-template-columns: auto auto ;} }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { .content{grid-template-columns: auto auto auto ;} }
+
+// X-Large devices (large desktops, 1200px and up)
+ @media (min-width: 1200px) {
+	.content {
+		grid-template-columns: auto auto auto auto;
+	}
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+//@media (min-width: 1400px) { .content{grid-template-columns: auto auto auto;} }

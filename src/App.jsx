@@ -34,8 +34,8 @@ export default function App() {
 				<input 
 					title=''
 					type="file"
-					id="avatar"
-					name="avatar"
+					id=""
+					name=""
 					accept=".xlsx"
 					value={test}
 					onChange={setData}
