@@ -1,6 +1,6 @@
 import Excel from 'exceljs';
 
-export const translationFilePathAndFileName = 'http://localhost:5889/uploadedFiles/translations.xlsx';
+export const translationFilePathAndFileName = './backend/importData/translations.xlsx';
 
 export const getTranslations = async () => {
     const wb = new Excel.Workbook();
