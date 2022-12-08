@@ -8,7 +8,7 @@ const _initialUploadFile = {
   name: "",
 };
 
-function Upload() {
+function Upload({ setTranslations, setCurrentPage }) {
   const [uploadFile, setUploadFile] = useState({ ..._initialUploadFile });
   const [status, setStatus] = useState("");
 
@@ -25,6 +25,8 @@ function Upload() {
       });
       const translations = await response.json();
       console.log(translations);
+      setTranslations(translations);
+      setCurrentPage(1); // Ustaw bieżącą stronę na 1 po wysłaniu pliku
       if (response) setStatus(response.statusText);
       document.getElementById("mainForm").reset();
       setUploadFile({ ..._initialUploadFile });
@@ -32,31 +34,44 @@ function Upload() {
   };
 
   const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setStatus("");
-    const _uploadFile = {
-      name: file.name,
-      preview: URL.createObjectURL(file),
+    const newUploadFile = {
+      preview: URL.createObjectURL(e.target.files[0]),
       data: e.target.files[0],
+      name: e.target.files[0].name,
     };
-    setUploadFile(_uploadFile);
+    setUploadFile(newUploadFile);
   };
 
   return (
-    <div className="upload">
-      <h1>File Uploader</h1>
-
+    <>
       <form id="mainForm" onSubmit={handleSubmit}>
-        <label>File to upload</label>
-        <input type="file" onChange={handleFileChange}></input>
-        <div className="buttonArea">
-          {uploadFile.name}
-          <div className="buttonWrapper">
-            <button type="submit">Submit</button>
-          </div>
+        <div className="form-group">
+          <label>XLSX File</label>
+          <input
+      
+            type="file"
+            className="form-control-file btn btn-primary file"
+            name="file"
+            accept=".xlsx, .xls"
+            onChange={handleFileChange}
+          />
         </div>
+        <div className="form-group">
+          <input
+            type="submit"
+            className="btn btn-primary"
+            value="Upload File"
+          />
+        </div>
+        {status !== "" ? (
+          <div className="alert alert-primary mt-3" role="alert">
+            {status}
+          </div>
+        ) : (
+          ""
+        )}
       </form>
-    </div>
+    </>
   );
 }
 

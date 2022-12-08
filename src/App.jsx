@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from "react";
 import Pagination from "./pagination";
-import data from "./data/translations.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import "./scss/App.scss";
@@ -10,23 +9,24 @@ const PageSize = 20;
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [translations, setTranslations] = useState([]);
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
-    return data.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage]);
+    return translations.slice(firstPageIndex, lastPageIndex);
+  }, [currentPage, translations]);
   return (
     <>
       <h1>Excel Read/Write Example</h1>
       <p>Welcome to this site.</p>
       <h2>
         There are {(currentPage - 1) * PageSize + 1} to{" "}
-        {currentPage > data.length / PageSize
-          ? (currentPage - 1) * PageSize + (data.length % PageSize)
+        {currentPage > translations.length / PageSize
+          ? (currentPage - 1) * PageSize + (translations.length % PageSize)
           : (currentPage - 1) * PageSize + PageSize}{" "}
-        from {data.length} translations:
+        from {translations.length} translations:
       </h2>
-      <Upload />
+      <Upload setTranslations={setTranslations} setCurrentPage={setCurrentPage} />
       <div className="container-fluid">
         <div className="content">
           {currentTableData.map((item, i) => {
@@ -66,7 +66,7 @@ export default function App() {
         <Pagination
           className="pagination-bar"
           currentPage={currentPage}
-          totalCount={data.length}
+          totalCount={translations.length}
           pageSize={PageSize}
           onPageChange={(page) => setCurrentPage(page)}
         />
@@ -74,4 +74,3 @@ export default function App() {
     </>
   );
 }
-
