@@ -63,13 +63,6 @@ function Upload({ setTranslations, setCurrentPage }) {
             value="Upload File"
           />
         </div>
-        {status !== "" ? (
-          <div className="alert alert-primary mt-3" role="alert">
-            {status}
-          </div>
-        ) : (
-          ""
-        )}
       </form>
     </>
   );

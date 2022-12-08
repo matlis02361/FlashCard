@@ -10,11 +10,20 @@ const PageSize = 20;
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [translations, setTranslations] = useState([]);
+  const [size, setSize] = useState(1);
+  const [color, setColor] = useState("lightgrey");
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return translations.slice(firstPageIndex, lastPageIndex);
   }, [currentPage, translations]);
+  const printCards = () => {
+    const printContents = document.getElementById("printCards").innerHTML;
+    const originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+  };
   return (
     <>
       <h1>Excel Read/Write Example</h1>
@@ -26,17 +35,78 @@ export default function App() {
           : (currentPage - 1) * PageSize + PageSize}{" "}
         from {translations.length} translations:
       </h2>
-      <Upload setTranslations={setTranslations} setCurrentPage={setCurrentPage} />
+      <div className="d-flex">
+        <button onClick={() => setSize(1)} className="control-btn">
+          XS
+        </button>
+        <button onClick={() => setSize(1.5)} className="control-btn">
+          SM
+        </button>
+        <button onClick={() => setSize(2)} className="control-btn">
+          MD
+        </button>
+        <button onClick={() => setSize(2.5)} className="control-btn">
+          LG
+        </button>
+        <div className="d-flex flex-wrap">
+          {[
+            "lightgrey",
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "teal",
+            "blue",
+            "indigo",
+            "purple",
+            "pink",
+            "lightblue",
+            "lightgreen",
+            "lightyellow",
+            "lightred",
+            "lavender",
+            "lightpurple",
+            "cyan",
+            "brown",
+            "black",
+            "lightorange",
+            "lightcyan",
+            "lightlavender",
+            "darkblue",
+            "darkgreen",
+            "darkyellow",
+            "darkred",
+            "darkpurple",
+            "darkpink",
+            "darkcyan",
+            "darkbrown",
+            "darkblack",
+            "darkorange",
+          ].map((item, i) => {
+            return (
+              <button
+                style={{ backgroundColor: item }}
+                onClick={() => setColor(item)}
+                className="color-btn"
+              ></button>
+            );
+          })}
+        </div>
+      </div>
+      <Upload
+        setTranslations={setTranslations}
+        setCurrentPage={setCurrentPage}
+      />
       <div className="container-fluid">
-        <div className="content">
+        <div className="content" id="printCards">
           {currentTableData.map((item, i) => {
             return (
               <div key={i}>
                 <Card
                   style={{
-                    height: "150px",
-                    width: "300px",
-                    backgroundColor: "lightgrey",
+                    height: `${100 * size}px`,
+                    width: `${200 * size}px`,
+                    backgroundColor: color,
                   }}
                 >
                   <Card.Body>
@@ -47,9 +117,9 @@ export default function App() {
 
                 <Card
                   style={{
-                    height: "150px",
-                    width: "300px",
-                    backgroundColor: "lightblue",
+                    height: `${100 * size}px`,
+                    width: `${200 * size}px`,
+                    backgroundColor: color,
                   }}
                 >
                   <Card.Body>
@@ -70,6 +140,9 @@ export default function App() {
           pageSize={PageSize}
           onPageChange={(page) => setCurrentPage(page)}
         />
+        <button onClick={printCards} className="control-btn">
+          Print Cards
+        </button>
       </div>
     </>
   );
