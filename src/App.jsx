@@ -82,6 +82,9 @@ export default function App() {
               ></button>
             );
           })}
+          <button onClick={printCards} className="control-btn">
+            Print Cards
+          </button>
         </div>
       </div>
       <Upload
@@ -89,7 +92,7 @@ export default function App() {
         setCurrentPage={setCurrentPage}
       />
       <div className="container-fluid">
-        <div className="content" id="printCards">
+        <div className="content print-cards " id="printCards">
           {currentTableData.map((item, i) => {
             return (
               <div key={i}>
@@ -103,7 +106,25 @@ export default function App() {
                   <Card.Body>
                     <Card.Title>{item.fromLanguage}</Card.Title>
                     <Card.Text>{item.fromPhrase}</Card.Text>
+                    <button
+                      onClick={() => {
+                        const updatedTranslations = [...translations];
+                        updatedTranslations[i].image =
+                          window.prompt("Enter image URL");
+                        setTranslations(updatedTranslations);
+                      }}
+                    >
+                      Add Image
+                    </button>
                   </Card.Body>
+                  <Card.Img
+                    src={item.image}
+                    style={{
+                      height: `${20 * size}px`,
+                      width: `${30 * size}px`,
+                      backgroundColor: color,
+                    }}
+                  />
                 </Card>
 
                 <Card
@@ -117,6 +138,14 @@ export default function App() {
                     <Card.Title>{item.toLanguage}</Card.Title>
                     <Card.Text>{item.toPhrase}</Card.Text>
                   </Card.Body>
+                  <Card.Img
+                    src={item.image}
+                    style={{
+                      height: `${20 * size}px`,
+                      width: `${30 * size}px`,
+                      backgroundColor: color,
+                    }}
+                  />
                 </Card>
               </div>
             );
@@ -131,9 +160,6 @@ export default function App() {
           pageSize={PageSize}
           onPageChange={(page) => setCurrentPage(page)}
         />
-        <button onClick={printCards} className="control-btn">
-          Print Cards
-        </button>
       </div>
     </>
   );
