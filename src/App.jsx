@@ -6,19 +6,15 @@ import Card from "react-bootstrap/Card";
 import "./scss/App.scss";
 import Upload from "./upload.jsx";
 
-let PageSize = 20;
+const PageSize = 20;
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [dataXlsx, setData] = useState("");
-  const [test, setTest] = useState(null);
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return data.slice(firstPageIndex, lastPageIndex);
   }, [currentPage]);
-  console.log(dataXlsx);
-  console.log(test);
   return (
     <>
       <h1>Excel Read/Write Example</h1>
@@ -78,3 +74,4 @@ export default function App() {
     </>
   );
 }
+
