@@ -1,6 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
-
+import { useState } from "react";
 
 const backendUrl = "http://localhost:5889";
 const _initialUploadFile = {
@@ -24,6 +23,8 @@ function Upload() {
         method: "POST",
         body: formData,
       });
+      const translations = await response.json();
+      console.log(translations);
       if (response) setStatus(response.statusText);
       document.getElementById("mainForm").reset();
       setUploadFile({ ..._initialUploadFile });
