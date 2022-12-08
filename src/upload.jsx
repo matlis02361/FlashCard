@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./scss/upload.scss";
-import axios from "axios";
+
 
 const backendUrl = "http://localhost:5889";
 const _initialUploadFile = {
