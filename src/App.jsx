@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import "./scss/App.scss";
 import Upload from "./upload.jsx";
+import { PrintCards } from "./printCards";
 
 const PageSize = 20;
 
@@ -17,60 +18,54 @@ export default function App() {
     const lastPageIndex = firstPageIndex + PageSize;
     return translations.slice(firstPageIndex, lastPageIndex);
   }, [currentPage, translations]);
-  const printCards = () => {
-    const printContents = document.getElementById("printCards").innerHTML;
-    const originalContents = document.body.innerHTML;
-    document.body.innerHTML = printContents;
-    window.print();
-    document.body.innerHTML = originalContents;
-  };
+
   const handleSpeak = (cardText, fromLanguage) => {
     const speech = new SpeechSynthesisUtterance();
     speech.text = cardText;
-    if (fromLanguage === 'Greek') {
-      speech.lang = 'el-GR';
-    } else if (fromLanguage === 'French') {
-      speech.lang = 'fr-FR';
-    } else if (fromLanguage === 'German') {
-      speech.lang = 'de-DE';
-    } else if (fromLanguage === 'Spanish') {
-      speech.lang = 'es-ES';
-    } else if (fromLanguage === 'Russian') {
-      speech.lang = 'ru-RU';
-    } else if (fromLanguage === 'Croatian') {
-      speech.lang = 'hr-HR';
-    } else if (fromLanguage === 'Turkish') {
-      speech.lang = 'tr-TR';
-    } else if (fromLanguage === 'Italian') {
-      speech.lang = 'it-IT';
-    } else if (fromLanguage === 'Arabic') {
-      speech.lang = 'ar-SA';
-    } else if (fromLanguage === 'Japanese') {
-      speech.lang = 'ja-JP';
-    } else if (fromLanguage === 'Polish') {
-      speech.lang = 'pl-PL';
-    } else if (fromLanguage === 'Chinese') {
-      speech.lang = 'zh-CN';
-    } else if (fromLanguage === 'Dutch') {
-      speech.lang = 'nl-NL';
-    } else if (fromLanguage === 'Portuguese') {
-      speech.lang = 'pt-PT';
-    } else if (fromLanguage === 'Uighur') {
-      speech.lang = 'ug-CN';
-    } else if (fromLanguage === 'Hungarian') {
-      speech.lang = 'hu-HU';
-    } else if (fromLanguage === 'Persian') {
-      speech.lang = 'fa-IR';
-    } else if (fromLanguage === 'Czech') {
-      speech.lang = 'cs-CZ';
-    } else if (fromLanguage === 'Ukrainian') {
-      speech.lang = 'uk-UA';
+    if (fromLanguage === "Greek") {
+      speech.lang = "el-GR";
+    } else if (fromLanguage === "French") {
+      speech.lang = "fr-FR";
+    } else if (fromLanguage === "German") {
+      speech.lang = "de-DE";
+    } else if (fromLanguage === "Spanish") {
+      speech.lang = "es-ES";
+    } else if (fromLanguage === "Russian") {
+      speech.lang = "ru-RU";
+    } else if (fromLanguage === "Croatian") {
+      speech.lang = "hr-HR";
+    } else if (fromLanguage === "Turkish") {
+      speech.lang = "tr-TR";
+    } else if (fromLanguage === "Italian") {
+      speech.lang = "it-IT";
+    } else if (fromLanguage === "Arabic") {
+      speech.lang = "ar-SA";
+    } else if (fromLanguage === "Japanese") {
+      speech.lang = "ja-JP";
+    } else if (fromLanguage === "Polish") {
+      speech.lang = "pl-PL";
+    } else if (fromLanguage === "Chinese") {
+      speech.lang = "zh-CN";
+    } else if (fromLanguage === "Dutch") {
+      speech.lang = "nl-NL";
+    } else if (fromLanguage === "Portuguese") {
+      speech.lang = "pt-PT";
+    } else if (fromLanguage === "Uighur") {
+      speech.lang = "ug-CN";
+    } else if (fromLanguage === "Hungarian") {
+      speech.lang = "hu-HU";
+    } else if (fromLanguage === "Persian") {
+      speech.lang = "fa-IR";
+    } else if (fromLanguage === "Czech") {
+      speech.lang = "cs-CZ";
+    } else if (fromLanguage === "Ukrainian") {
+      speech.lang = "uk-UA";
     } else {
-      speech.lang = 'en-US';
+      speech.lang = "en-US";
     }
     speechSynthesis.speak(speech);
-  }
-  
+  };
+
   return (
     <>
       <h1>Excel Read/Write Example</h1>
@@ -129,9 +124,7 @@ export default function App() {
               ></button>
             );
           })}
-          <button onClick={printCards} className="control-btn">
-            Print Cards
-          </button>
+          <PrintCards />
         </div>
       </div>
       <Upload
