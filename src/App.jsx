@@ -6,14 +6,14 @@ import "./scss/App.scss";
 import Upload from "./upload.jsx";
 import { PrintCards } from "./printCards";
 import { SpeakButton } from "./speakButton";
-import { ColorPicker } from "./StyleControlsCard.jsx";
+import { ColorPicker, Sizes } from "./StyleControlsCard.jsx";
 // todo: import Translator from "./translator.jsx";
 const PageSize = 20;
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [translations, setTranslations] = useState([]);
-  const [size, setSize] = useState(1.3);
+  const [sizeCard, setCardsSize] = useState(1.3);
   const [color, setColor] = useState("lightgrey");
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
@@ -33,23 +33,9 @@ export default function App() {
           : (currentPage - 1) * PageSize + PageSize}{" "}
         from {translations.length} translations:
       </h2>
-      <div className="d-flex">
-        <button onClick={() => setSize(1.3)} className="control-btn">
-          XS
-        </button>
-        <button onClick={() => setSize(1.5)} className="control-btn">
-          SM
-        </button>
-        <button onClick={() => setSize(2)} className="control-btn">
-          MD
-        </button>
-        <button onClick={() => setSize(2.5)} className="control-btn">
-          LG
-        </button>
-       
-        <PrintCards />
-        <ColorPicker setColor={setColor} />
-      </div>
+      <Sizes setSize={setCardsSize} />
+      <PrintCards />
+      <ColorPicker setColor={setColor} />
       <Upload
         setTranslations={setTranslations}
         setCurrentPage={setCurrentPage}
@@ -61,8 +47,8 @@ export default function App() {
               <div key={i}>
                 <Card
                   style={{
-                    height: `${100 * size}px`,
-                    width: `${200 * size}px`,
+                    height: `${100 * sizeCard}px`,
+                    width: `${200 * sizeCard}px`,
                     backgroundColor: color,
                   }}
                 >
@@ -88,8 +74,8 @@ export default function App() {
                   <Card.Img
                     src={item.image}
                     style={{
-                      height: `${20 * size}px`,
-                      width: `${30 * size}px`,
+                      height: `${20 * sizeCard}px`,
+                      width: `${30 * sizeCard}px`,
                       backgroundColor: color,
                     }}
                   />
@@ -97,8 +83,8 @@ export default function App() {
 
                 <Card
                   style={{
-                    height: `${100 * size}px`,
-                    width: `${200 * size}px`,
+                    height: `${100 * sizeCard}px`,
+                    width: `${200 * sizeCard}px`,
                     backgroundColor: color,
                   }}
                 >
@@ -115,8 +101,8 @@ export default function App() {
                   <Card.Img
                     src={item.image}
                     style={{
-                      height: `${20 * size}px`,
-                      width: `${30 * size}px`,
+                      height: `${20 * sizeCard}px`,
+                      width: `${30 * sizeCard}px`,
                       backgroundColor: color,
                     }}
                   />

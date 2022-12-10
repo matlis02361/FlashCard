@@ -44,9 +44,7 @@ const ColorPicker = ({ setColor }) => {
 
 
 
-/* const Sizes = ({setSize}) => {
-    const [size, setSize ] = useState(1);
-  
+const Sizes = ({setSize}) => {
     return (
       <div className="d-flex">
         <button onClick={() => setSize(1)} className="control-btn">
@@ -65,5 +63,5 @@ const ColorPicker = ({ setColor }) => {
     );
   };
 
- */
-  export {ColorPicker} ;
+
+  export {ColorPicker, Sizes} ;
