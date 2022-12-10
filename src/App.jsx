@@ -6,6 +6,7 @@ import "./scss/App.scss";
 import Upload from "./upload.jsx";
 import { PrintCards } from "./printCards";
 import { SpeakButton } from "./speakButton";
+import { ColorPicker } from "./StyleControlsCard.jsx";
 // todo: import Translator from "./translator.jsx";
 const PageSize = 20;
 
@@ -24,9 +25,7 @@ export default function App() {
     <>
       <h1>Excel Read/Write Example</h1>
       <p>Welcome to this site.</p>
-      <div className="d-flex ">
-     {/*  // todo  <Translator /> */}
-      </div>
+      <div className="d-flex ">{/*  // todo  <Translator /> */}</div>
       <h2>
         There are {(currentPage - 1) * PageSize + 1} to{" "}
         {currentPage > translations.length / PageSize
@@ -47,42 +46,9 @@ export default function App() {
         <button onClick={() => setSize(2.5)} className="control-btn">
           LG
         </button>
-        <div className="d-flex flex-wrap">
-          {[
-            "lightgrey",
-            "red",
-            "orange",
-            "yellow",
-            "green",
-            "teal",
-            "blue",
-            "indigo",
-            "purple",
-            "pink",
-            "lightblue",
-            "lightgreen",
-            "lightyellow",
-            "lavender",
-            "cyan",
-            "brown",
-            "black",
-            "lightcyan",
-            "darkblue",
-            "darkgreen",
-            "darkred",
-            "darkcyan",
-            "darkorange",
-          ].map((item, i) => {
-            return (
-              <button
-                style={{ backgroundColor: item }}
-                onClick={() => setColor(item)}
-                className="color-btn"
-              ></button>
-            );
-          })}
-          <PrintCards />
-        </div>
+       
+        <PrintCards />
+        <ColorPicker setColor={setColor} />
       </div>
       <Upload
         setTranslations={setTranslations}
