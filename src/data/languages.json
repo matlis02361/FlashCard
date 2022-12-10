@@ -1,0 +1,602 @@
+[
+    {
+        "Language": "Russian",
+        "code": "ru-RU"
+    },
+    {
+        "Language": "English",
+        "code": "en-US"
+    },
+    {
+        "Language": "Spanish",
+        "code": "es-ES"
+    },
+    {
+        "Language": "French",
+        "code": "fr-FR"
+    },
+    {
+        "Language": "German",
+        "code": "de-DE"
+    },
+    {
+        "Language": "Italian",
+        "code": "it-IT"
+    },
+    {
+        "Language": "Polish",
+        "code": "pl-PL"
+    },
+    {
+        "Language": "Portuguese",
+        "code": "pt-PT"
+    },
+    {
+        "Language": "Chinese",
+        "code": "zh-CN"
+    },
+    {
+        "Language": "Japanese",
+        "code": "ja-JP"
+    },
+    {
+        "Language": "Korean",
+        "code": "ko-KR"
+    },
+    {
+        "Language": "Arabic",
+        "code": "ar-SA"
+    },
+    {
+        "Language": "Hindi",
+        "code": "hi-IN"
+    },
+    {
+        "Language": "Bengali",
+        "code": "bn-BD"
+    },
+    {
+        "Language": "Indonesian",
+        "code": "id-ID"
+    },
+    {
+        "Language": "Vietnamese",
+        "code": "vi-VN"
+    },
+    {
+        "Language": "Thai",
+        "code": "th-TH"
+    },
+    {
+        "Language": "Turkish",
+        "code": "tr-TR"
+    },
+    {
+        "Language": "Persian",
+        "code": "fa-IR"
+    },
+    {
+        "Language": "Urdu",
+        "code": "ur-PK"
+    },
+    {
+        "Language": "Hebrew",
+        "code": "he-IL"
+    },
+    {
+        "Language": "Filipino",
+        "code": "fil-PH"
+    },
+    {
+        "Language": "Malay",
+        "code": "ms-MY"
+    },
+    {
+        "Language": "Tamil",
+        "code": "ta-IN"
+    },
+    {
+        "Language": "Haitian Creole",
+        "code": "ht-HT"
+    },
+    {
+        "Language": "Greek",
+        "code": "el-GR"
+    },
+    {
+        "Language": "Bulgarian",
+        "code": "bg-BG"
+    },
+    {
+        "Language": "Serbian",
+        "code": "sr-RS"
+    },
+    {
+        "Language": "Croatian",
+        "code": "hr-HR"
+    },
+    {
+        "Language": "Lithuanian",
+        "code": "lt-LT"
+    },
+    {
+        "Language": "Slovenian",
+        "code": "sl-SI"
+    },
+    {
+        "Language": "Latvian",
+        "code": "lv-LV"
+    },
+    {
+        "Language": "Estonian",
+        "code": "et-EE"
+    },
+    {
+        "Language": "Albanian",
+        "code": "sq-AL"
+    },
+    {
+        "Language": "Danish",
+        "code": "da-DK"
+    },
+    {
+        "Language": "Finnish",
+        "code": "fi-FI"
+    },
+    {
+        "Language": "Icelandic",
+        "code": "is-IS"
+    },
+    {
+        "Language": "Swedish",
+        "code": "sv-SE"
+    },
+    {
+        "Language": "Norwegian",
+        "code": "no-NO"
+    },
+    {
+        "Language": "Czech",
+        "code": "cs-CZ"
+    },
+    {
+        "Language": "Hungarian",
+        "code": "hu-HU"
+    },
+    {
+        "Language": "Slovak",
+        "code": "sk-SK"
+    },
+    {
+        "Language": "Romanian",
+        "code": "ro-RO"
+    },
+    {
+        "Language": "Ukrainian",
+        "code": "uk-UA"
+    },
+    {
+        "Language": "Armenian",
+        "code": "hy-AM"
+    },
+    {
+        "Language": "Azerbaijani",
+        "code": "az-AZ"
+    },
+    {
+        "Language": "Georgian",
+        "code": "ka-GE"
+    },
+    {
+        "Language": "Afrikaans",
+        "code": "af-ZA"
+    },
+    {
+        "Language": "Basque",
+        "code": "eu-ES"
+    },
+    {
+        "Language": "Catalan",
+        "code": "ca-ES"
+    },
+    {
+        "Language": "Galician",
+        "code": "gl-ES"
+    },
+    {
+        "Language": "Welsh",
+        "code": "cy-GB"
+    },
+    {
+        "Language": "Irish",
+        "code": "ga-IE"
+    },
+    {
+        "Language": "Maltese",
+        "code": "mt-MT"
+    },
+    {
+        "Language": "Luxembourgish",
+        "code": "lb-LU"
+    },
+    {
+        "Language": "Javanese",
+        "code": "jv-ID"
+    },
+    {
+        "Language": "Sundanese",
+        "code": "su-ID"
+    },
+    {
+        "Language": "Minangkabau",
+        "code": "min-ID"
+    },
+    {
+        "Language": "Malayalam",
+        "code": "ml-IN"
+    },
+    {
+        "Language": "Marathi",
+        "code": "mr-IN"
+    },
+    {
+        "Language": "Oriya",
+        "code": "or-IN"
+    },
+    {
+        "Language": "Punjabi",
+        "code": "pa-IN"
+    },
+    {
+        "Language": "Gujarati",
+        "code": "gu-IN"
+    },
+    {
+        "Language": "Assamese",
+        "code": "as-IN"
+    },
+    {
+        "Language": "Kannada",
+        "code": "kn-IN"
+    },
+    {
+        "Language": "Telugu",
+        "code": "te-IN"
+    },
+    {
+        "Language": "Sinhala",
+        "code": "si-LK"
+    },
+    {
+        "Language": "Burmese",
+        "code": "my-MM"
+    },
+    {
+        "Language": "Khmer",
+        "code": "km-KH"
+    },
+    {
+        "Language": "Lao",
+        "code": "lo-LA"
+    },
+    {
+        "Language": "Rundi",
+        "code": "rn-BI"
+    },
+    {
+        "Language": "Hausa",
+        "code": "ha-NG"
+    },
+    {
+        "Language": "Igbo",
+        "code": "ig-NG"
+    },
+    {
+        "Language": "Yoruba",
+        "code": "yo-NG"
+    },
+    {
+        "Language": "Somali",
+        "code": "so-SO"
+    },
+    {
+        "Language": "Swahili",
+        "code": "sw-TZ"
+    },
+    {
+        "Language": "Kinyarwanda",
+        "code": "rw-RW"
+    },
+    {
+        "Language": "Nepali",
+        "code": "ne-NP"
+    },
+    {
+        "Language": "Dhivehi",
+        "code": "dv-MV"
+    },
+    {
+        "Language": "Tajik",
+        "code": "tg-TJ"
+    },
+    {
+        "Language": "Uzbek",
+        "code": "uz-UZ"
+    },
+    {
+        "Language": "Kazakh",
+        "code": "kk-KZ"
+    },
+    {
+        "Language": "Mongolian",
+        "code": "mn-MN"
+    },
+    {
+        "Language": "Tibetan",
+        "code": "bo-CN"
+    },
+    {
+        "Language": "Amharic",
+        "code": "am-ET"
+    },
+    {
+        "Language": "Geez",
+        "code": "ti-ET"
+    },
+    {
+        "Language": "Pashto",
+        "code": "ps-AF"
+    },
+    {
+        "Language": "Kurdish",
+        "code": "ku-IQ"
+    },
+    {
+        "Language": "Balochi",
+        "code": "bal-PK"
+    },
+    {
+        "Language": "Kashmiri",
+        "code": "ks-IN"
+    },
+    {
+        "Language": "Sindhi",
+        "code": "sd-PK"
+    },
+    {
+        "Language": "Hakka",
+        "code": "hak-CN"
+    },
+    {
+        "Language": "Konkani",
+        "code": "kok-IN"
+    },
+    {
+        "Language": "Bhojpuri",
+        "code": "bho-IN"
+    },
+    {
+        "Language": "Magahi",
+        "code": "mag-IN"
+    },
+    {
+        "Language": "Awadhi",
+        "code": "awa-IN"
+    },
+    {
+        "Language": "Garo",
+        "code": "grt-IN"
+    },
+    {
+        "Language": "Maithili",
+        "code": "mai-IN"
+    },
+    {
+        "Language": "Saraiki",
+        "code": "skr-PK"
+    },
+    {
+        "Language": "Dogri",
+        "code": "doi-IN"
+    },
+    {
+        "Language": "Kurukh",
+        "code": "kru-IN"
+    },
+    {
+        "Language": "Santali",
+        "code": "sat-IN"
+    },
+    {
+        "Language": "German",
+        "code": "de-DE"
+    },
+    {
+        "Language": "Afrikaans",
+        "code": "af-ZA"
+    },
+    {
+        "Language": "English",
+        "code": "en-US"
+    },
+    {
+        "Language": "Spanish",
+        "code": "es-ES"
+    },
+    {
+        "Language": "French",
+        "code": "fr-FR"
+    },
+    {
+        "Language": "Italian",
+        "code": "it-IT"
+    },
+    {
+        "Language": "Russian",
+        "code": "ru-RU"
+    },
+    {
+        "Language": "Chinese",
+        "code": "zh-CN"
+    },
+    {
+        "Language": "Japanese",
+        "code": "ja-JP"
+    },
+    {
+        "Language": "Korean",
+        "code": "ko-KR"
+    },
+    {
+        "Language": "Polish",
+        "code": "pl-PL"
+    },
+    {
+        "Language": "Portuguese",
+        "code": "pt-PT"
+    },
+    {
+        "Language": "Arabic",
+        "code": "ar-SA"
+    },
+    {
+        "Language": "Hindi",
+        "code": "hi-IN"
+    },
+    {
+        "Language": "Bengali",
+        "code": "bn-BD"
+    },
+    {
+        "Language": "Indonesian",
+        "code": "id-ID"
+    },
+    {
+        "Language": "Vietnamese",
+        "code": "vi-VN"
+    },
+    {
+        "Language": "Thai",
+        "code": "th-TH"
+    },
+    {
+        "Language": "Turkish",
+        "code": "tr-TR"
+    },
+    {
+        "Language": "Persian",
+        "code": "fa-IR"
+    },
+    {
+        "Language": "Urdu",
+        "code": "ur-PK"
+    },
+    {
+        "Language": "Hebrew",
+        "code": "he-IL"
+    },
+    {
+        "Language": "Filipino",
+        "code": "fil-PH"
+    },
+    {
+        "Language": "Malay",
+        "code": "ms-MY"
+    },
+    {
+        "Language": "Tamil",
+        "code": "ta-IN"
+    },
+    {
+        "Language": "Haitian Creole",
+        "code": "ht-HT"
+    },
+    {
+        "Language": "Greek",
+        "code": "el-GR"
+    },
+    {
+        "Language": "Bulgarian",
+        "code": "bg-BG"
+    },
+    {
+        "Language": "Serbian",
+        "code": "sr-RS"
+    },
+    {
+        "Language": "Croatian",
+        "code": "hr-HR"
+    },
+    {
+        "Language": "Lithuanian",
+        "code": "lt-LT"
+    },
+    {
+        "Language": "Slovenian",
+        "code": "sl-SI"
+    },
+    {
+        "Language": "Latvian",
+        "code": "lv-LV"
+    },
+    {
+        "Language": "Estonian",
+        "code": "et-EE"
+    },
+    {
+        "Language": "Albanian",
+        "code": "sq-AL"
+    },
+    {
+        "Language": "Danish",
+        "code": "da-DK"
+    },
+    {
+        "Language": "Finnish",
+        "code": "fi-FI"
+    },
+    {
+        "Language": "Icelandic",
+        "code": "is-IS"
+    },
+    {
+        "Language": "Swedish",
+        "code": "sv-SE"
+    },
+    {
+        "Language": "Norwegian",
+        "code": "no-NO"
+    },
+    {
+        "Language": "Czech",
+        "code": "cs-CZ"
+    },
+    {
+        "Language": "Hungarian",
+        "code": "hu-HU"
+    },
+    {
+        "Language": "Slovak",
+        "code": "sk-SK"
+    },
+    {
+        "Language": "Romanian",
+        "code": "ro-RO"
+    },
+    {
+        "Language": "Ukrainian",
+        "code": "uk-UA"
+    },
+    {
+        "Language": "Armenian",
+        "code": "hy-AM"
+    },
+    {
+        "Language": "Azerbaijani",
+        "code": "az-AZ"
+    },
+    {
+        "Language": "Georgian",
+        "code": "ka-GE"
+    }
+]
