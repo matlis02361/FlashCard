@@ -15,6 +15,9 @@ const handleSpeak = (cardText, fromLanguage) => {
   if (languageCode) {
     speech.lang = languageCode.code;
   } else {
+    /*  LanguageCodeByName is responsible for finding the language code for a given language
+     using a translator. Includes cases where a language name is used in another language. 
+     For example, the Polish name "Niemcy" is "Germany" in English */
     const languageCodeByName = translations.find(
       (language) =>
         language.name.toLowerCase() === translatedLanguage.toLowerCase()
@@ -22,7 +25,6 @@ const handleSpeak = (cardText, fromLanguage) => {
     if (languageCodeByName) {
       speech.lang = languageCodeByName.code;
     } else {
-        
       // todo : Verwenden die Übersetzerfunktion, um den Namen des Landes in sein englisches Äquivalent zu ändern
 
       const englishLanguageCode = languages.find(

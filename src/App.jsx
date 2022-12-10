@@ -13,7 +13,7 @@ const PageSize = 20;
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [translations, setTranslations] = useState([]);
-  const [size, setSize] = useState(1);
+  const [size, setSize] = useState(1.3);
   const [color, setColor] = useState("lightgrey");
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
@@ -34,7 +34,7 @@ export default function App() {
         from {translations.length} translations:
       </h2>
       <div className="d-flex">
-        <button onClick={() => setSize(1)} className="control-btn">
+        <button onClick={() => setSize(1.3)} className="control-btn">
           XS
         </button>
         <button onClick={() => setSize(1.5)} className="control-btn">
