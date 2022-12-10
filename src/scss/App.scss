@@ -77,13 +77,19 @@ input[type="file"]::-webkit-file-upload-button {
 //@media (min-width: 1400px) { .content{grid-template-columns: auto auto auto;} }
 
 
-
 @media print {
-  #printCards {
-    display: flex;
-    justify-content: center;
-    width: 200px;
-    height: 100px;
-    background-color: lightgrey;
+  
+  .print-cards {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
   }
+
+  .print-cards .card {
+    width: 200px !important;
+    height: 100px !important;
+    margin: 5px !important;
+    background: rgb(29, 9, 9) !important;
+  }
+
 }
