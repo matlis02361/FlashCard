@@ -7,12 +7,16 @@ import Upload from "./upload.jsx";
 import { PrintCards } from "./printCards";
 import { SpeakButton } from "./speakButton";
 import { ColorPicker, Sizes } from "./StyleControlsCard.jsx";
+import defaultTranslations from "./data/translations.json"
+ import {FileSaver} from './saveTranslations';
 // todo: import Translator from "./translator.jsx";
 const PageSize = 20;
 
+
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [translations, setTranslations] = useState([]);
+  const [translations, setTranslations] = useState(defaultTranslations);
   const [sizeCard, setCardsSize] = useState(1.3);
   const [color, setColor] = useState("lightgrey");
   const currentTableData = useMemo(() => {
@@ -40,6 +44,9 @@ export default function App() {
         setTranslations={setTranslations}
         setCurrentPage={setCurrentPage}
       />
+        <FileSaver newData={translations}>
+      Save data
+    </FileSaver>
       <div className="container-fluid">
         <div className="content print-cards " id="printCards">
           {currentTableData.map((item, i) => {
@@ -55,20 +62,14 @@ export default function App() {
                   <Card.Body>
                     <Card.Title>{item.fromLanguage}</Card.Title>
                     <Card.Text>{item.fromPhrase}</Card.Text>
-                    <button
-                      onClick={() => {
-                        const imageAdd = [...translations];
-                        imageAdd[i].image = window.prompt("Enter image URL");
-                        setTranslations(imageAdd);
-                      }}
-                    >
-                      Add Image
-                    </button>
+              
                     <SpeakButton
                       item={{
                         Phrase: item.fromPhrase,
                         Language: item.fromLanguage,
                       }}
+                      text={item.fromLanguage}
+                      
                     />
                   </Card.Body>
                   <Card.Img
@@ -96,6 +97,7 @@ export default function App() {
                         Phrase: item.toPhrase,
                         Language: item.toLanguage,
                       }}
+                      text={item.toLanguage}
                     />
                   </Card.Body>
                   <Card.Img
@@ -107,6 +109,15 @@ export default function App() {
                     }}
                   />
                 </Card>
+                <button
+                      onClick={() => {
+                        const imageAdd = [...translations];
+                        imageAdd[i].image = window.prompt("Enter image URL");
+                        setTranslations(imageAdd);
+                      }}
+                    >
+                      Add Image
+                    </button>
               </div>
             );
           })}

@@ -42,10 +42,10 @@ const handleSpeak = (cardText, fromLanguage) => {
   speechSynthesis.speak(speech);
 };
 
-const SpeakButton = ({ item }) => {
+const SpeakButton = ({ item, text }) => {
   return (
     <Button onClick={() => handleSpeak(item.Phrase, item.Language)}>
-      Speak
+     Speak {text}
     </Button>
   );
 };
