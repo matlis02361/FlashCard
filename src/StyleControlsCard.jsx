@@ -45,7 +45,12 @@ const ColorPicker = ({ setColor }) => {
 
 const Sizes = ({ setSize }) => {
   return (
-    <div className="d-flex">
+    <div
+      className="d-flex justify-content-around"
+      style={{
+        width: `${200}px`,
+      }}
+    >
       <Button onClick={() => setSize(1)} className="control-btn mt-3">
         XS
       </Button>
