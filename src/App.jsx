@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <>
-      <h1>Excel Read/Write Example</h1>
+      <h1>Excel Read/Write FlashCard</h1>
       <p>Welcome to this site.</p>
       <div className="d-flex ">{/*  // todo  <Translator /> */}</div>
       <h2>
