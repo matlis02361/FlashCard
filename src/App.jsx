@@ -33,9 +33,9 @@ export default function App() {
       <h1>Excel Read/Write FlashCard</h1>
       <p>Welcome to this site.</p>
       <div>
-   {/*// todo <MainMenu /><SideMenu /> */}
-      <p>Lorem ipsum dolor sit amet...</p>
-    </div>
+        {/*// todo <MainMenu /><SideMenu /> */}
+        <p>Lorem ipsum dolor sit amet...</p>
+      </div>
       <div className="d-flex ">{/*  // todo  <Translator /> */}</div>
       <h2>
         There are {(currentPage - 1) * PageSize + 1} to{" "}
@@ -65,7 +65,17 @@ export default function App() {
                   }}
                 >
                   <Card.Body>
-                    <Card.Title>{item.fromLanguage}</Card.Title>
+                    <Card.Title>
+                      {item.fromLanguage}{" "}
+                      <Card.Img
+                        src={item.image}
+                        style={{
+                          height: `${20 * sizeCard}px`,
+                          width: `${30 * sizeCard}px`,
+                          backgroundColor: color,
+                        }}
+                      />
+                    </Card.Title>
                     <Card.Text>{item.fromPhrase}</Card.Text>
 
                     <SpeakButton
@@ -76,14 +86,6 @@ export default function App() {
                       text={item.fromLanguage}
                     />
                   </Card.Body>
-                  <Card.Img
-                    src={item.image}
-                    style={{
-                      height: `${20 * sizeCard}px`,
-                      width: `${30 * sizeCard}px`,
-                      backgroundColor: color,
-                    }}
-                  />
                 </Card>
 
                 <Card
@@ -94,7 +96,17 @@ export default function App() {
                   }}
                 >
                   <Card.Body>
-                    <Card.Title>{item.toLanguage}</Card.Title>
+                    <Card.Title>
+                      {item.toLanguage}{" "}
+                      <Card.Img
+                        src={item.image}
+                        style={{
+                          height: `${20 * sizeCard}px`,
+                          width: `${30 * sizeCard}px`,
+                          backgroundColor: color,
+                        }}
+                      />
+                    </Card.Title>
                     <Card.Text>{item.toPhrase}</Card.Text>
                     <SpeakButton
                       item={{
@@ -104,14 +116,6 @@ export default function App() {
                       text={item.toLanguage}
                     />
                   </Card.Body>
-                  <Card.Img
-                    src={item.image}
-                    style={{
-                      height: `${20 * sizeCard}px`,
-                      width: `${30 * sizeCard}px`,
-                      backgroundColor: color,
-                    }}
-                  />
                 </Card>
 
                 <ImageAddButton
