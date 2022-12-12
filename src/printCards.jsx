@@ -1,5 +1,7 @@
 import React from "react";
 import "./scss/App.scss";
+import { Button } from "react-bootstrap";
+
 
 export const PrintCards = () => {
   const printWindow = () => {
@@ -32,8 +34,8 @@ export const PrintCards = () => {
   };
 
   return (
-    <button onClick={printWindow} className="control-btn">
+    <Button onClick={printWindow} className="control-btn mt-3">
       Print Cards
-    </button>
+    </Button>
   );
 };
