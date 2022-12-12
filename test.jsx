@@ -102,3 +102,30 @@ export default function App() {
     </div>
   );
 }
+
+
+
+
+import React from "react";
+import { Nav, Navbar } from "react-bootstrap";
+
+export default function MenuGłówne() {
+  return (
+    <Navbar bg="light" expand="lg">
+      <Navbar.Brand href="#home">Excel Read/Write FlashCard</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="#home">Strona główna</Nav.Link>
+          <Nav.Link href="#import-eksport">
+            Importowanie i eksportowanie danych
+          </Nav.Link>
+          <Nav.Link href="#zmiana-rozmiaru-koloru">
+            Zmiana rozmiaru i koloru kart
+          </Nav.Link>
+          <Nav.Link href="#zmiana-jezyka">Zmiana języka</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  );
+}

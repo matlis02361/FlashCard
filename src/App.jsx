@@ -10,6 +10,10 @@ import { ColorPicker, Sizes } from "./StyleControlsCard.jsx";
 import defaultTranslations from "./data/translations.json";
 import { FileSaver } from "./saveTranslations";
 import ImageAddButton from "./addImage";
+/* 
+Todo import MainMenu from "./MainMenu";
+todo import SideMenu from "./SideMenu"; 
+*/
 // todo: import Translator from "./translator.jsx";
 const PageSize = 20;
 
@@ -28,6 +32,10 @@ export default function App() {
     <>
       <h1>Excel Read/Write FlashCard</h1>
       <p>Welcome to this site.</p>
+      <div>
+   {/*// todo <MainMenu /><SideMenu /> */}
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
       <div className="d-flex ">{/*  // todo  <Translator /> */}</div>
       <h2>
         There are {(currentPage - 1) * PageSize + 1} to{" "}
