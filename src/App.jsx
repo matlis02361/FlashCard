@@ -67,15 +67,17 @@ export default function App() {
                   <Card.Body>
                     <Card.Title>
                       {item.fromLanguage}{" "}
-                      
-                      <Card.Img
-                        src={item.image}
-                        style={{
-                          height: `${20 * sizeCard}px`,
-                          width: `${30 * sizeCard}px`,
-                          backgroundColor: color,
-                        }}
-                      />
+
+                      {item.image && (
+                        <Card.Img
+                          src={item.image}
+                          style={{
+                            height: `${20 * sizeCard}px`,
+                            width: `${30 * sizeCard}px`,
+                            backgroundColor: color,
+                          }}
+                        />
+                      )}
                     </Card.Title>
                     <Card.Text>{item.fromPhrase}</Card.Text>
 
@@ -99,8 +101,7 @@ export default function App() {
                   <Card.Body>
                     <Card.Title>
                       {item.toLanguage}{" "}
-                      <div>({item.image})</div>
-                     
+
                     </Card.Title>
                     <Card.Text>{item.toPhrase}</Card.Text>
                     <SpeakButton
