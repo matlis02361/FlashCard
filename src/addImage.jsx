@@ -3,13 +3,15 @@ import { Button } from "react-bootstrap";
 
    
   
-  const ImageAddButton = ({setTranslations, translations, i}) => {
+  const ImageAddButton = ({setTranslations , translations, item }) => {
     return (
         <Button
         onClick={() => {
-          const imageAdd = [...translations];
-          imageAdd[i].image = window.prompt("Enter image URL");
-          setTranslations(imageAdd);
+         // const imageAdd = [...translations];
+         
+         item.image = window.prompt("Enter image URL");
+
+          setTranslations([...translations]);
         }}
       >
         Add Image

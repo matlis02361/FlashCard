@@ -67,6 +67,7 @@ export default function App() {
                   <Card.Body>
                     <Card.Title>
                       {item.fromLanguage}{" "}
+                      
                       <Card.Img
                         src={item.image}
                         style={{
@@ -98,14 +99,8 @@ export default function App() {
                   <Card.Body>
                     <Card.Title>
                       {item.toLanguage}{" "}
-                      <Card.Img
-                        src={item.image}
-                        style={{
-                          height: `${20 * sizeCard}px`,
-                          width: `${30 * sizeCard}px`,
-                          backgroundColor: color,
-                        }}
-                      />
+                      <div>({item.image})</div>
+                     
                     </Card.Title>
                     <Card.Text>{item.toPhrase}</Card.Text>
                     <SpeakButton
@@ -121,7 +116,7 @@ export default function App() {
                 <ImageAddButton
                   setTranslations={setTranslations}
                   translations={translations}
-                  i={i}
+                  item={item}
                 />
               </div>
             );
