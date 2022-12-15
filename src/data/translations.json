@@ -3,7 +3,8 @@
         "fromLanguage": "English",
         "toLanguage": "French",
         "fromPhrase": "the quiz",
-        "toPhrase": "le quizz"
+        "toPhrase": "le quizz",
+        "image": "https://edwardtanguay.vercel.app/share/images/books/epicofgilgamesh.png"
     },
     {
         "fromLanguage": "English",
